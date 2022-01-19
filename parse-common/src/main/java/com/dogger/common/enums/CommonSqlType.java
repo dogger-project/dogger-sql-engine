@@ -1,4 +1,4 @@
-package com.github.bhy.common.enums;
+package com.dogger.common.enums;
 
 /**
  * @Classname CommonSqlType

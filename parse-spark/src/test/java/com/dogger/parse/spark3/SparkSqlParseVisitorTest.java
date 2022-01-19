@@ -1,12 +1,13 @@
-package com.github.bhy.parse.spark3;
+package com.dogger.parse.spark3;
 
-import com.github.bhy.antlr4.UpperCaseCharStream;
-import com.github.bhy.antlr4.spark3.SparkSqlBaseLexer;
-import com.github.bhy.antlr4.spark3.SparkSqlBaseParser;
+
+import com.dogger.core.antlr4.spark3.Spark3SqlBaseLexer;
+import com.dogger.core.antlr4.spark3.Spark3SqlBaseParser;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.atn.PredictionMode;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.spark.sql.catalyst.parser.UpperCaseCharStream;
 import org.junit.Test;
 
 /**
@@ -22,9 +23,9 @@ public class SparkSqlParseVisitorTest {
         String sql = "CREATE DATABASE IF NOT EXISTS bigdata";
         UpperCaseCharStream upperCaseCharStream =
             new UpperCaseCharStream(CharStreams.fromString(StringUtils.trim(sql)));
-        SparkSqlBaseLexer lexer = new SparkSqlBaseLexer(upperCaseCharStream);
+        Spark3SqlBaseLexer lexer = new Spark3SqlBaseLexer(upperCaseCharStream);
         CommonTokenStream tokenStream = new CommonTokenStream(lexer);
-        SparkSqlBaseParser sparkSqlBaseParser = new SparkSqlBaseParser(tokenStream);
+        Spark3SqlBaseParser sparkSqlBaseParser = new Spark3SqlBaseParser(tokenStream);
 
         sparkSqlBaseParser.getInterpreter().setPredictionMode(PredictionMode.SLL);
 

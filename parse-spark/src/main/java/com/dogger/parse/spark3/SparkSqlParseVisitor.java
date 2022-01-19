@@ -1,6 +1,6 @@
-package com.github.bhy.parse.spark3;
+package com.dogger.parse.spark3;
 
-import com.github.bhy.antlr4.spark3.SparkSqlBaseBaseVisitor;
+import com.dogger.core.antlr4.spark3.Spark3SqlBaseBaseVisitor;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 /**
@@ -9,7 +9,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
  * @Date 2022/1/15 12:48 AM
  * @Created by bihaiyang
  */
-public class SparkSqlParseVisitor extends SparkSqlBaseBaseVisitor {
+public class SparkSqlParseVisitor extends Spark3SqlBaseBaseVisitor {
 
     @Override
     public Object visit(ParseTree tree) {

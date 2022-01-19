@@ -1,4 +1,4 @@
-package com.github.bhy.common.consts;
+package com.dogger.common.consts;
 
 /**
  * @Classname CommonConst
